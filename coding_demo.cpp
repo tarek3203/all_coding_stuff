@@ -15,7 +15,7 @@
 using namespace std;
 #define ll long long int
 #define w(aa) ll tc;cin>>tc;while(tc--)
-const ll N = 10000001;
+const ll N = 100000000;
 /*ll abs(ll x){
     return (x>0?x:-x);
 }*/
