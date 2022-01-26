@@ -37,7 +37,9 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-const int N = 1e7+9;
+#define ll long long int
+#define w(aa) ll tc;cin>>tc;while(tc--)
+const int N = 1e7+9, mod = 1e9 + 7;
 /* const ll vn = 1e9+9; */
 /*int abs(int x){
 return (x>0?x:-x);
