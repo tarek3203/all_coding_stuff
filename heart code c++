@@ -1,0 +1,108 @@
+
+/****************************************************************/
+/****************************************************************/
+/**                                                            **/
+/**                  BISMILLAHIR RAHMANIR RAHIM                **/
+/**                TARIQ___BIN___BASHAR    NEWBIE              **/
+/**              MANARAT__lNTERNATIONAL__UNIVERSITY            **/
+/**       DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING       **/
+/**     INSHA-ALLAH  I WILL BE ABLE TO CONFIRM MY DREAM JOB    **/
+/**                                                            **/
+/****************************************************************/
+/****************************************************************/
+#include <iostream>
+#include <vector>
+#include <list>
+#include <map>
+#include <set>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <bitset>
+#include <algorithm>
+#include <functional>
+#include <numeric>
+#include <utility>
+#include <sstream>
+#include <iostream>
+#include <iomanip>
+#include <cstdio>
+#include <cmath>
+#include <cstdlib>
+#include <cctype>
+#include <string>
+#include <cstring>
+#include <cstdio>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <climits>
+#include <string.h>
+using namespace std;
+#define ll long long
+#define w(aa) ll tc;cin>>tc;while(tc--)
+#define endl '\n'
+const int N = 1e5 + 9, mod = 1e9 + 7;
+
+int main(){
+    /*
+     ios_base::sync_with_stdio(0);
+     cin.tie(0)
+     */
+    double x, y, size = 15;// first i declared
+    int print_line = 4;
+    char ch = '*';
+    
+    string SS_thake_sara_din_ghumaiya(" I STILL FEEL YOU, BUT YOU NEVER FELT ME BRO. ");
+    // secondly i declared the string that i have to print
+    
+    if(SS_thake_sara_din_ghumaiya.length() % 2 != 0){
+        SS_thake_sara_din_ghumaiya += " ";
+    }// this is the first condition
+    
+    for( x = 0; x < size; x++ ) {// first loop
+        for( y = 0; y <= 4 * size; y++ ){// second loop
+            
+            double dist1 = sqrt( pow( x - size, 2) + pow( y - size, 2) );
+            double dist2 = sqrt( pow(x - size, 2) + pow( y - 3 * size, 2) );
+            
+            if (dist1 < size + 0.5 || dist2 < size + 0.5 ) cout << ch;
+            else cout << " ";// space counted
+            
+        }
+        
+        cout << endl;// then print the endline
+        
+    }
+    // next we have to print the second double loop
+    
+    for( x = 1; x < 2 * size; x++) {
+        for( y = 0; y < x; y++) cout << " ";// counting the space
+        
+        for ( y = 0; y < 4 * size + 1 - 2 * x; y++){
+            
+            if ( x >= print_line - 1 && x <= print_line + 1 ){
+                
+                int idx = y - ( 4 * size - 2 * x - SS_thake_sara_din_ghumaiya.length()) / 2;
+                //setting the index for printing the character
+                if(idx < SS_thake_sara_din_ghumaiya.length() && idx >= 0) {
+                    
+                    if (x == print_line) cout << SS_thake_sara_din_ghumaiya[idx];
+                    // then print those character
+                    else cout << " "; // then space
+                    
+                }
+                
+                else cout << ch; // this is the *
+            }
+            
+            else cout << ch;// same
+            
+        }
+        
+        cout << endl;// finally the endl print
+    }
+ // the has been ended.
+    // so now we are ready to see the output
+    return 0;
+}
